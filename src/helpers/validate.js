@@ -25,13 +25,6 @@ const validateEmail = email => {
         errors[field] = `This field must have at least ${currentField.minLength} characters`;
       }
   
-      if(!errors[field] && currentField.file && currentField.allowedTypes && !currentField.allowedTypes.includes(currentField.value.type.split('/')[1])) {
-        errors[field] = 'Invalid file type!';
-      }
-  
-      if(!errors[field] && currentField.file && currentField.maxFileSize && (currentField.maxFileSize * 1024) < Math.round(currentField.value.size)) {
-        errors[field] = `File is too large(${Math.round(currentField.value.size / 1024)}KB), it cannot be larger than ${currentField.maxFileSize}KB`;
-      }
     }
   
     return errors;

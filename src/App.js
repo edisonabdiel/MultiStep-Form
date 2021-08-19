@@ -8,7 +8,13 @@ const App = () => {
     <>
       <section className="">
         <NavBar />
-        <Form />
+        <div className="container pt-5">
+        <div className="columns">
+          <div className="column is-half is-offset-one-quarter">
+            <Form />
+          </div>
+        </div>
+      </div>
       </section>
     </>
   );
