@@ -1,12 +1,14 @@
 import './App.css';
-import  NavBar  from './components/NavBar';
+// Custom made components
+import NavBar from './components/NavBar';
+import Form from './components/Form';
 
 const App = () => {
   return (
     <>
       <section className="">
         <NavBar />
-        <h1>The form will render here</h1>
+        <Form />
       </section>
     </>
   );

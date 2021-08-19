@@ -12,24 +12,24 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-menu">
                     <div className="navbar-start">
-                        <a className="navbar-item" >
+                        <a className="navbar-item" href="/" >
                             Home
                         </a>
-                        <a className="navbar-item">
+                        <a className="navbar-item" href="/" >
                             Get Started
                         </a>
                         <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link">
+                            <a className="navbar-link" href="/">
                                 Details
                             </a>
                             <div className="navbar-dropdown">
-                                <a className="navbar-item" href="#">
+                                <a className="navbar-item" href="/">
                                     Our Space Suits
                                 </a>
-                                <a className="navbar-item" href="#">
+                                <a className="navbar-item" href="/">
                                     Our Space Ships
                                 </a>
-                                <a className="navbar-item" href="#">
+                                <a className="navbar-item" href="/">
                                     Our Interplanetary Bases
                                 </a>
                             </div>
@@ -38,10 +38,10 @@ const NavBar = () => {
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                <a className="button is-primary">
+                                <a className="button is-primary" href="/">
                                     <strong>Sign up</strong>
                                 </a>
-                                <a className="button is-light">
+                                <a className="button is-light" href="/">
                                     Log in
                                 </a>
                             </div>
