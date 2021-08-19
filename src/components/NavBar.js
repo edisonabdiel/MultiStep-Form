@@ -1,9 +1,8 @@
 import React from 'react';
+// React Icon component
 import { GiSpaceSuit } from 'react-icons/gi';
 
-
 // Custom made navbar component
-
 const NavBar = () => {
     return (
         <>
