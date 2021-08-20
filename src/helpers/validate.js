@@ -3,7 +3,7 @@ const validateEmail = email => {
     return re.test(email);
   }
   
- export default (fields) => {
+ const fields = (fields) => {
     let errors = {};
   
     for(let field in fields) {
@@ -33,3 +33,5 @@ const validateEmail = email => {
          
     return errors;
   }
+
+export default fields;
