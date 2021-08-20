@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 // React Icon component
 import { GiSpaceSuit } from 'react-icons/gi';
 
 // Custom made navbar component
 const NavBar = () => {
     return (
-        <>
+        <Fragment>
             <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="https://github.com/edisonabdiel"><GiSpaceSuit size="2.5rem" title="mars and beyond logo"/><strong>Mars&Beyond</strong></a>
@@ -49,7 +49,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </nav>
-        </>
+        </Fragment>
     )
 }
 
