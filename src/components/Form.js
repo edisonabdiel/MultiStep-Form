@@ -20,6 +20,7 @@ const Form = () => {
                     { value: 'Demon', label: 'Demon' },
                     { value: 'Angel', label: 'Angel' },
                     { value: 'Ghost', label: 'Ghost' },
+                    { value: 'Fairy', label: 'Fairy' },
                 ]
             },
             firstName: {
@@ -65,7 +66,7 @@ const Form = () => {
                 value: '',
                 required: true,
                 type: 'select',
-                placeholder: 'Pick your Planet fo Origin',
+                placeholder: 'Pick your Planet or Dimension of Origin',
                 choices: [
                     { value: '', label: 'Choose your Planet or Dimension of Origin' },
                     { value: 'Earth', label: 'Earth' },
@@ -73,6 +74,7 @@ const Form = () => {
                     { value: 'Mars', label: 'Mars' },
                     { value: 'Heaven', label: 'Heaven' },
                     { value: 'Mercury', label: 'Mercury' },
+                    { value: 'Neverland', label: 'Neverland' },
                     { value: 'Rather not to say', label: 'Rather not to say' },
                 ]
             }
@@ -80,18 +82,24 @@ const Form = () => {
         stepThree: {
             cardInfo: {
                 value: '',
+                minLength: 16,
+                maxLength: 16,
                 required: true,
                 type: 'input',
                 placeholder: 'Card Number'
             },
             cardExpiration: {
                 value: '',
+                minLength: 3,
+                maxLength: 5,
                 required: true,
                 type: 'input',
                 placeholder: 'Expiration Date'
             },
             cardSecurity: {
                 value: '',
+                minLength: 3,
+                maxLength: 3,
                 required: true,
                 type: 'input',
                 placeholder: 'Security Code in the back your Card eg 123...'
@@ -129,7 +137,7 @@ const Form = () => {
 
         const data = new FormData();
         // stepOne
-        data.append('race', formData.stepThree.race.value);
+        data.append('race', formData.stepOne.race.value);
         data.append('firstName', formData.stepOne.firstName.value);
         data.append('lastName', formData.stepOne.lastName.value);
         data.append('email', formData.stepOne.email.value);
@@ -137,7 +145,6 @@ const Form = () => {
         // stepTwo
         data.append('address', formData.stepTwo.address.value);
         data.append('city', formData.stepTwo.city.value);
-        data.append('state', formData.stepTwo.state.value);
         data.append('planet', formData.stepTwo.planet.value);
         // stepThree
         data.append('cardInfo', formData.stepThree.cardInfo.value);
@@ -186,7 +193,8 @@ const Form = () => {
                     { label: 'Password', value: formData.stepOne.password.value },
                     { label: "I'm a", value: formData.stepOne.race.value },
                     { label: "From", value: formData.stepTwo.planet.value },
-                    { label: "Card Info", value: formData.stepThree.cardInfo.value },
+                    { label: "Card Number", value: formData.stepThree.cardInfo.value },
+                    { label: "Expiration Date", value: formData.stepThree.cardExpiration.value }
                 ]}
             />}
         </form>

@@ -24,8 +24,12 @@ const validateEmail = email => {
       if(!errors[field] && currentField.minLength && currentField.value.trim().length < currentField.minLength) {
         errors[field] = `This field must have at least ${currentField.minLength} characters`;
       }
+
+      if(!errors[field] && currentField.maxLength && currentField.value.trim().length > currentField.maxLength) {
+        errors[field] = `This field must have less than ${currentField.maxLength} characters`;
+      }
   
     }
-  
+         
     return errors;
   }

@@ -2,15 +2,14 @@ import React, { Fragment } from 'react';
 
 const Preview = ({ data, onPrevStep }) => {
   return(
-    <div className="panel is-primary">
+    <div className="panel is-dark">
       <p className="panel-heading">Your data</p>
       <div className="panel-block is-block">
         <ul className="py-5">
           {data.map((input, index) => (
             <li key={index} className="py-2">
-              {!input.image
-                ? <Fragment><strong>{input.label}:</strong> {input.value}</Fragment>
-                : <div><strong>{input.label}:</strong> <img src={input.value} alt="" style={{maxWidth: '100px'}} /></div>
+              {
+                <Fragment><strong>{input.label}:</strong> {input.value}</Fragment> 
               }
             </li>
           ))}
