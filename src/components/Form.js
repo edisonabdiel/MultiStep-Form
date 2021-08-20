@@ -192,7 +192,8 @@ const Form = () => {
                     { label: 'Email', value: formData.stepOne.email.value },
                     { label: 'Password', value: formData.stepOne.password.value },
                     { label: "I'm a", value: formData.stepOne.race.value },
-                    { label: "From", value: formData.stepTwo.planet.value },
+                    { label: "Livin at", value: formData.stepTwo.address.value },
+                    { label: "In", value: formData.stepTwo.planet.value },
                     { label: "Card Number", value: formData.stepThree.cardInfo.value },
                     { label: "Expiration Date", value: formData.stepThree.cardExpiration.value }
                 ]}

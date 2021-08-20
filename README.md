@@ -1,10 +1,58 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://github.com/edisonabdiel/MultiStep-Form">
+    <img width="1429" alt="Screenshot 2021-08-20 at 18 43 09" src="https://user-images.githubusercontent.com/43752457/130266495-3bdfee93-4baf-4513-a481-879a7b062bbe.png" alt="project front page" width="600">
+  </a>
+  <p align="center">
+    Just another chat app for mobile devices built with React Native.
+  </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#get-started">Get Started</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+
+
+## About the Project
+
+<p align="center">
+A fun and modern looking form featuring steps + input validation. Built with React + Bulma.io + Framer Motion.
+</p>
+
+## Built With
+
+## Built With
+
+- [JavaScript](https://www.javascript.com/)
+- [Bulma.io](https://bulma.io/)
+- [Framer Motion](https://www.framer.com/)
+- [React](https://reactjs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### Dependencies
+
+- prop.types
+- react-icons
+
+
+### Dev Dependencies
+
+- babel
+- eslint
+
+<br>
+
+## Get Started
+
+Clone the project from [GitHub], cd to the newly downloaded folder and then from the root file run the following commands:
 
 ### `yarn start`
 
@@ -17,7 +65,6 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -26,8 +73,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `yarn eject`
 
@@ -39,9 +84,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
