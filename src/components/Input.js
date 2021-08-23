@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = ({ type = 'text', placeholder, name, value, onChange, error }) => {
-  return(
+  return (
     <div className="mb-5">
       <input
-        className={error ? "input is-danger" : "input"} 
-        type={type} 
+        className={error ? "input is-danger" : "input"}
+        type={type}
         placeholder={placeholder}
         name={name}
         value={value}

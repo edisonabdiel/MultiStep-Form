@@ -5,7 +5,9 @@ import Preview from './Preview';
 import validate from '../helpers/validate';
 
 const Form = () => {
+    // Step state
     const [step, setStep] = useState(1);
+    // Form state
     const [formData, setFormData] = useState({
         stepOne: {
             race: {
@@ -106,8 +108,9 @@ const Form = () => {
             }
         }
     });
+    // Error state
     const [errors, setErrors] = useState({});
-
+    // Gets called when the user inputs new data. Updates the form state.
     const changeHandler = (step, e) => {
         e.persist();
 
@@ -122,7 +125,7 @@ const Form = () => {
             }
         }));
     }
-
+    // Gets called when the user moves to the next step. Sets the step state to the next step. Checks for errors and sets the errors state.
     const stepChangeHandler = (values, e) => {
         e.preventDefault();
         const newErrors = validate(values);
@@ -131,7 +134,7 @@ const Form = () => {
             setStep(step + 1);
         }
     }
-
+    // Appends the form state to the formData state. Data can then be sent to the server to be saved (optional). Data is passed to the child components and finaly to the preview component.
     const submitHandler = (e) => {
         e.preventDefault();
 

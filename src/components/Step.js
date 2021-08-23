@@ -6,10 +6,10 @@ import Select from './Select';
 
 const Step = ({ data, onChange, onStepChange, errors, stepKey, step, onPrevStep }) => {
   let output = [];
-
-  for(const [key, val] of Object.entries(data)) {
-    if(val.type.split(':')[0] === 'input') {
-      output.push(<Input 
+  // Loop through the types of inputs
+  for (const [key, val] of Object.entries(data)) {
+    if (val.type.split(':')[0] === 'input') {
+      output.push(<Input
         key={key}
         placeholder={val.placeholder}
         name={key}
@@ -18,8 +18,8 @@ const Step = ({ data, onChange, onStepChange, errors, stepKey, step, onPrevStep 
         error={errors[key]}
         type={val.type.split(':')[1]}
       />);
-    }else if(val.type === 'select') {
-      output.push(<Select 
+    } else if (val.type === 'select') {
+      output.push(<Select
         key={key}
         name={key}
         value={val.value}
@@ -29,8 +29,8 @@ const Step = ({ data, onChange, onStepChange, errors, stepKey, step, onPrevStep 
       />);
     }
   }
-  
-  return(
+  // Renders the output and the "Go back" & "Next" buttons. Calls handlers.
+  return (
     <Fragment>
       {output}
       {step > 1 && <button type="button" className="button is-warning mr-2" onClick={() => onPrevStep(step - 1)}>Go back</button>}

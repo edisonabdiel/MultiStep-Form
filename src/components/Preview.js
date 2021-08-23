@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 const Preview = ({ data, onPrevStep }) => {
-  return(
+  return (
     <div className="panel is-dark">
       <p className="panel-heading">Your data</p>
       <div className="panel-block is-block">
@@ -9,7 +9,7 @@ const Preview = ({ data, onPrevStep }) => {
           {data.map((input, index) => (
             <li key={index} className="py-2">
               {
-                <Fragment><strong>{input.label}:</strong> {input.value}</Fragment> 
+                <Fragment><strong>{input.label}:</strong> {input.value}</Fragment>
               }
             </li>
           ))}
